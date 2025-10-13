@@ -11,6 +11,7 @@ public class Tema2Ejercicio18 {
 
         if (numero >= 0) {
             double raiz = Math.sqrt(numero);
+            // Utilizamos Math.sqrt para sacar la raiz cuadrada
             System.out.println("La raíz cuadrada de " + numero + " es: " + raiz);
         } else {
             System.out.println("Error: No se puede calcular la raíz cuadrada de un número negativo.");

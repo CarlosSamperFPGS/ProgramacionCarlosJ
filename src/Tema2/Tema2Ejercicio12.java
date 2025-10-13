@@ -15,7 +15,10 @@ public class Tema2Ejercicio12 {
         Double num3 = scan.nextDouble();
         Double[] numeros = {num1, num2, num3};
         Arrays.sort(numeros, Collections.reverseOrder());
+        // Utilizamos el util Collections.reverseOrder, ya que por defecto Array ordena de menor a mayor y nos piden lo contrario
+        // Ya que no solicita los numeros ordenados utilizamos Arrays.Sort
         System.out.println("Los números ordenados de mayor a menor son: " + Arrays.toString(numeros));
+        // Utilizamos .toString para mostrar como string el contenido de un array
         scan.close();
     }
 }
