@@ -1,7 +1,7 @@
 package Tema2;
 
 import java.util.Scanner;
-
+//switch
 public class Tema2Ejercicio17 {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);

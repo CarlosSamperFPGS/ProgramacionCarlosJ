@@ -1,6 +1,6 @@
 package Tema2;
 
-import java.util.Scanner;
+import java.util.Scanner;//comentario de prueba
 
 public class Tema2Ejercicio1 {
     public static void main(String[] args) {
