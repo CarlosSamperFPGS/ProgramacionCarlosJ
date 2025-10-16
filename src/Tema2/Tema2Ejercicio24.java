@@ -10,10 +10,10 @@ public class Tema2Ejercicio24 {
         //Si no inicializo la variable nota con un valor me da error (Consultar Ana) Pero ponerlo me indica un warning igualmente
         int aprobados = 0;
         int suspensos = 0;
-            System.out.println("Introduce la nota para evaluar: para finalizar introduce -1");
+            System.out.println("Introduce la nota para evaluar: para finalizar introduce un número negativo");
         nota = sc.nextDouble();
-        while (nota != -1) {
-            if (nota >= 5)
+        while (nota > 0) {
+            if (nota >= 5 && nota <= 10)
                 aprobados++;
             else
                 suspensos++;
