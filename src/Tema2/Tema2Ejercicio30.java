@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class Tema2Ejercicio30 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        double num1, num2, resultado;
+        double num1, num2, resultado; //en la wiki he descubierto que si quiero añadir varias variables de un mismo tipo puedo hacerlo usando comas.
         char operacion;
         String input;
 
