@@ -9,7 +9,7 @@ import java.util.Scanner;
 public class Tema2Ejercicio28 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        int numAleatorio = (int) (Math.random() * 1000);
+        int numAleatorio = (int) (Math.random() * 100000);
         for (int i = 1; i <= 5; i++) {
             System.out.println("Introduce tus números de lotería");
             int num = sc.nextInt();
