@@ -7,11 +7,11 @@ public class Tema2Ejercicio30 {
         Scanner sc = new Scanner(System.in);
         double num1, num2, resultado; //en la wiki he descubierto que si quiero añadir varias variables de un mismo tipo puedo hacerlo usando comas.
         char operacion;
-        String input;
+        String input = "code";
 
         System.out.println("Bienvenido a la calculadora. Escribe 'exit' para salir en cualquier momento.");
 
-        while (true) {
+        while (!input.equals("exit")) {
             System.out.print("Introduce el primer número: ");
             input = sc.next();
             if (input.equalsIgnoreCase("exit")) {
