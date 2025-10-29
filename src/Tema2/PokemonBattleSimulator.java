@@ -55,6 +55,13 @@ public class PokemonBattleSimulator {
         int p2_vidaMax = 0, p2_vidaActual = 0;
         int p2_atk = 0, p2_def = 0, p2_spAtk = 0, p2_spDef = 0, p2_spe = 0;
 
+        boolean p1AtacaPrimero;
+        boolean statscalc = true;
+        boolean statscalc2 = true;
+        boolean typeselect = true;
+        boolean typeselect2 = true;
+
+
         // =================================================================================
         // --- PANTALLA DE TITULO Y REGLAS ---
         // =================================================================================
@@ -116,17 +123,21 @@ public class PokemonBattleSimulator {
                 p1_nombre = sc.nextLine();
 
                 // --- Selección de Tipo ---
-                while (true) {
+                while (typeselect) {
                     System.out.print("Elige su tipo (Electrico, Fuego, Agua, Planta): ");
                     String tipoElegido = sc.nextLine();
                     if (tipoElegido.equalsIgnoreCase("Electrico")) {
-                        p1_tipo = tipoPikachu; p1_movTipoNombre = movTipoPikachu; break;
+                        p1_tipo = tipoPikachu; p1_movTipoNombre = movTipoPikachu;
+                        typeselect = false;
                     } else if (tipoElegido.equalsIgnoreCase("Fuego")) {
-                        p1_tipo = tipoCharmander; p1_movTipoNombre = movTipoCharmander; break;
+                        p1_tipo = tipoCharmander; p1_movTipoNombre = movTipoCharmander;
+                        typeselect = false;
                     } else if (tipoElegido.equalsIgnoreCase("Agua")) {
-                        p1_tipo = tipoSquirtle; p1_movTipoNombre = movTipoSquirtle; break;
+                        p1_tipo = tipoSquirtle; p1_movTipoNombre = movTipoSquirtle;
+                        typeselect = false;
                     } else if (tipoElegido.equalsIgnoreCase("Planta")) {
-                        p1_tipo = tipoBulbasaur; p1_movTipoNombre = movTipoBulbasaur; break;
+                        p1_tipo = tipoBulbasaur; p1_movTipoNombre = movTipoBulbasaur;
+                        typeselect = false;
                     } else {
                         System.out.println("Tipo no válido. Inténtalo de nuevo.");
                     }
@@ -141,7 +152,7 @@ public class PokemonBattleSimulator {
                 for (int i = 0; i < nombresStats.length; i++) {
                     System.out.println("\nPuntos restantes: " + puntosRestantes);
                     //TODO: quitar while true
-                    while (true) {
+                    while (statscalc) {
                         System.out.print("Puntos para " + nombresStats[i] + ": ");
                         int puntos = sc.nextInt();
                         sc.nextLine(); // Consumir salto de línea
@@ -155,7 +166,7 @@ public class PokemonBattleSimulator {
                         } else {
                             statsAsignadas[i] = puntos;
                             puntosRestantes -= puntos;
-                            break;
+                            statscalc = false;
                         }
                     }
                 }
@@ -201,17 +212,21 @@ public class PokemonBattleSimulator {
                 p2_nombre = sc.nextLine();
 
                 // --- Selección de Tipo ---
-                while (true) {
+                while (typeselect2) {
                     System.out.print("Elige su tipo (Electrico, Fuego, Agua, Planta): ");
                     String tipoElegido = sc.nextLine();
                     if (tipoElegido.equalsIgnoreCase("Electrico")) {
-                        p2_tipo = tipoPikachu; p2_movTipoNombre = movTipoPikachu; break;
+                        p2_tipo = tipoPikachu; p2_movTipoNombre = movTipoPikachu;
+                        typeselect2 = false;
                     } else if (tipoElegido.equalsIgnoreCase("Fuego")) {
-                        p2_tipo = tipoCharmander; p2_movTipoNombre = movTipoCharmander; break;
+                        p2_tipo = tipoCharmander; p2_movTipoNombre = movTipoCharmander;
+                        typeselect2 = false;
                     } else if (tipoElegido.equalsIgnoreCase("Agua")) {
-                        p2_tipo = tipoSquirtle; p2_movTipoNombre = movTipoSquirtle; break;
+                        p2_tipo = tipoSquirtle; p2_movTipoNombre = movTipoSquirtle;
+                        typeselect2 = false;
                     } else if (tipoElegido.equalsIgnoreCase("Planta")) {
-                        p2_tipo = tipoBulbasaur; p2_movTipoNombre = movTipoBulbasaur; break;
+                        p2_tipo = tipoBulbasaur; p2_movTipoNombre = movTipoBulbasaur;
+                        typeselect2 = false;
                     } else {
                         System.out.println("Tipo no válido. Inténtalo de nuevo.");
                     }
@@ -225,7 +240,7 @@ public class PokemonBattleSimulator {
 
                 for (int i = 0; i < nombresStats.length; i++) {
                     System.out.println("\nPuntos restantes: " + puntosRestantes);
-                    while (true) {
+                    while (statscalc2) {
                         System.out.print("Puntos para " + nombresStats[i] + ": ");
                         int puntos = sc.nextInt();
                         sc.nextLine(); // Consumir salto de línea
@@ -239,7 +254,7 @@ public class PokemonBattleSimulator {
                         } else {
                             statsAsignadas[i] = puntos;
                             puntosRestantes -= puntos;
-                            break;
+                            statscalc2 = false;
                         }
                     }
                 }
@@ -256,8 +271,7 @@ public class PokemonBattleSimulator {
         System.out.println("Jugador 2 ha elegido a " + p2_nombre + ".\n");
 
         // --- Determinar el orden de ataque basado en la velocidad ---
-       //TODO: crear variables arriba
-        boolean p1AtacaPrimero;
+       //Crear variables arriba --- HECHO ---
         if (p1_spe > p2_spe) {
             p1AtacaPrimero = true;
             System.out.println(p1_nombre + " es más rápido y atacará primero!");
