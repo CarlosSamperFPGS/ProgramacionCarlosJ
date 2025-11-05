@@ -1,4 +1,4 @@
-package Examen;
+package Simulacroexamen_Carlos.src.Examen;
 
 import java.util.Scanner;
 
@@ -92,6 +92,10 @@ public class ExamenEjercicio2 {
                             scdia.close();
                             break;
                     }
+                } else {
+                    System.out.println("La hora en Japón es " + hora + ":" + minutos + " " + dia);
+                    sc.close();
+                    scdia.close();
                 }
 
             } else {
@@ -148,6 +152,10 @@ public class ExamenEjercicio2 {
                             scdia.close();
                             break;
                     }
+                } else {
+                    System.out.println("La hora en España es " + hora + ":" + minutos + " " + dia);
+                    sc.close();
+                    scdia.close();
                 }
 
             }

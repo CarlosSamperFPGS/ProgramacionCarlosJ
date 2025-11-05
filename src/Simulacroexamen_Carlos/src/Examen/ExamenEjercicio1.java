@@ -20,6 +20,9 @@ public class ExamenEjercicio1 {
         switch (opcion) {
             case "a": { //La opción para el programa de evaluación
                 System.out.println("Bienvenido a la calculadora de notas, cuantas notas desea evaluar:");
+
+                //Inicializamos las variables de la calculadora de notas
+
                 int notascantidad = sc.nextInt();
                 int cont = 0;
                 int aprobados = 0;
@@ -51,6 +54,9 @@ public class ExamenEjercicio1 {
             case "b": //La compra de billetes, pregunto al usuario cuantos billetes quiere comprar, esa es mi forma de de controlar cuantos billetes se comprarn
                 System.out.println("Bienvenido al gestor de billetes");
                 System.out.println("Cuantos billetes desea comprar");
+
+                //Inicializamos las variables del gestor de billetes
+
                 int cantbilletes = sc.nextInt();
                 int cont2 = 1;
                 double preciobillete;
@@ -101,7 +107,7 @@ public class ExamenEjercicio1 {
                 System.out.println("Apagando el programa");
                 sc.close();
                 break;
-            default:
+            default: //Añadimos un default por si el usuario es tonto
                 System.out.println("No has seleccionado ningun programa, se procederá al apagado del mismo.");
                 sc.close();
 
